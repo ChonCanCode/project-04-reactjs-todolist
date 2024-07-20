@@ -24,9 +24,18 @@ This project aims to enhance my JavaScript knowledge through hands-on experience
 - Installed react extension enabling rfc shortcut
 - You can have components within components within components 
 - App.jsx (highest level parent component) make sure in the folder there is code importanting jsx from other files to there.
-- Terminal npm install (installing the react & react-dom)> run dev shows the following
+- Terminal npm install (installing the react & react-dom)> npm run dev shows the following
   ➜  Local:   http://localhost:5173/
   ➜  Network: use --host to expose
   ➜  press h + enter to show help
 
-
+**2024.07.20**
+- remember to run > npm run dev in active host servier. 
+- `JS` .map() used on arrays to create a new array by applying a function to each element of the original array. Inside the .map() array function will be used often as a function is require to apply on each element and split out a new array. use on array create a new array.
+- `JSX` file type is a JaaScript file with an additional feature: it allows you to write JSX syntax. JSX stands for JavaScript XML, and it lets you write HTML-like code within JavaScript.
+- `REACT` `export default` *export* statement in JS is about making code from one file available to other files. *default* refers to a special kind of export. This keyword is used to designate one main export from a module which can then be imported wihout using curly braces.
+- this means when the Todolist() {} is designated as a default export. Later on in other file it can can be imported as in below format
+  - `import Todolist from TodoList` with out {} if it is not a default export type then it will be `import {Todolist} from TodoList`.
+- `REACT` a prop = property is a specioal keyword used to pass data from a parent component to a child component. Props allow you to customise and confiure childre components by providing them with data or functions. `key={todo.id}`.
+- `REACT` Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML. Components come in two types, Class components and Function components
+- The `DOM` (Document Object Model) is a programming interface for web documents. It represents the structure of a document (such as an HTML or XML file) as a tree of objects, allowing programs and scripts to dynamically access and update the content, structure, and style of the document.

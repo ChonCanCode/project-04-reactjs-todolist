@@ -39,3 +39,53 @@ This project aims to enhance my JavaScript knowledge through hands-on experience
 - `REACT` a prop = property is a specioal keyword used to pass data from a parent component to a child component. Props allow you to customise and confiure childre components by providing them with data or functions. `key={todo.id}`.
 - `REACT` Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML. Components come in two types, Class components and Function components
 - The `DOM` (Document Object Model) is a programming interface for web documents. It represents the structure of a document (such as an HTML or XML file) as a tree of objects, allowing programs and scripts to dynamically access and update the content, structure, and style of the document.
+- In React, a `prop` (short for "property") is a special keyword used to pass data from one `component` to another. Props are `read-only` attributes that are passed from a `parent` component to a `child` component, enabling the child component to receive and use information provided by the parent. They are a core concept in React, allowing components to be dynamic and reusable.
+
+**2024.07.21**
+- Term `Attribute` in `REACT` refers to the properties or characteristics that are set on React elements, often corresponding to HTML attributes but within the context of JSX. These attributes define various aspect of the elements.
+- Term `Stateful variable` in `REACT` refers to a piece of data that is managed by the component's state. This data can change over time and when it does, it triggers a re-render of the component to reflect the updated state. Stateful variables are part of the component's state, managed using the useState hook (in functional components) or the this.state object and this.setState method (in class components).
+```
+const [todos, setTodos] = useState([
+  'Exercise',
+  'Food',
+  'Work',
+])
+
+```
+- `useState` is a Hook provided by React for managing state in functional components. When calling it it return with two elements:
+ - The current state value (todos)
+ - A function to update the state(setTodos)
+- `setTodos` can be named whatever, it become the function that allows you to update the state. When you call this function with a new state value, React updates the state and triggers a re-render of the component with the new state.
+- Unsure how (newTodo) is able to pick up the new input and assign it to (newTodo)
+```
+function handleAddTodos (newTodo) {
+  const newTodoList = [...todos, newTodo]
+  setTodos(newTodoList)
+}
+```
+
+- todoValue capture the input and assiged the value under the todoValue variable.
+```
+export default function TodoInput(props) {
+    const {handleAddTodos} = props;
+    const [todoValue, setTodoValue] = useState('')
+    return (
+        <header>
+            <input value={todoValue} onChange={(e) => {
+               setTodoValue(e.target.value) 
+            }
+            } placeholder="Enter todo..."/>
+            <button onClick={() => {
+                handleAddTodos(todoValue);
+            }}>Add</button>
+        </header>
+    )
+}
+```
+
+- Breakdown of `e.target.value`
+    e: This represents the event object that is passed to event handlers in JavaScript. It contains information about the event that occurred, such as the type of event and the target element.
+
+    e.target: The target property of the event object refers to the DOM element that triggered the event. For example, if a user types in an input field, e.target will be the input field itself.
+
+    e.target.value: The value property of e.target contains the current value of the form element that triggered the event. For an <input> element, this is the text currently entered in the input field.

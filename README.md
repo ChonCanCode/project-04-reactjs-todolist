@@ -89,3 +89,9 @@ export default function TodoInput(props) {
     e.target: The target property of the event object refers to the DOM element that triggered the event. For example, if a user types in an input field, e.target will be the input field itself.
 
     e.target.value: The value property of e.target contains the current value of the form element that triggered the event. For an <input> element, this is the text currently entered in the input field.
+
+
+**2024.07.22**
+- Have a better idea of how the add session works, will try to put it in writing later.
+- Working on Delete button today.
+- Reading the code over and over trying to understand how the delete mechanchic work.

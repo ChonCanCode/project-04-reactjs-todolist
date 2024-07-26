@@ -95,3 +95,13 @@ export default function TodoInput(props) {
 - Have a better idea of how the add session works, will try to put it in writing later.
 - Working on Delete button today.
 - Reading the code over and over trying to understand how the delete mechanchic work.
+
+
+**2024.07.23**
+- Understand how each step work step by step: https://chatgpt.com/share/a8baeab0-90a8-4f34-b73d-2f7ec1554cfe
+- Code of logic: https://chatgpt.com/share/a8baeab0-90a8-4f34-b73d-2f7ec1554cfe
+
+
+**2024.07.26**
+- Project completed but struggle to understand how each step work from beginning to end. 
+- Need to look for a more basic project to learn JS from.
